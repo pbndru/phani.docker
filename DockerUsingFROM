@@ -1,0 +1,17 @@
+# from base image node
+FROM node:14
+
+#build the image
+# docker build -t from-dockerfile -f DockerUsingFROM . 
+
+#list image
+#docker images
+
+#run the image
+#docker run -it -d from-dockerfile
+
+#get the container id
+#docker ps
+
+#run the image
+#docker exec -it <conatiner id> bash

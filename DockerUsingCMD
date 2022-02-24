@@ -1,0 +1,17 @@
+# from base image node
+FROM node:14
+
+# command executable and version
+CMD ["node","-v"]
+
+#build the image
+# docker build -t cmd-dockerfile -f DockerUsingCMD . 
+
+#list image
+#docker images
+
+#run the image
+#docker run -it -d cmd-dockerfile
+
+#use exec for interaction
+#docker exec -it <conatiner id> bash

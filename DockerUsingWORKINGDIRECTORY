@@ -1,0 +1,22 @@
+# from base image node
+FROM node:14
+
+WORKDIR /usr/node/app
+
+#get the path
+RUN pwd
+
+# command executable and version
+ENTRYPOINT ["node"]
+
+#build the image
+#docker build -t workingdirectory-dockerfile -f DockerUsingWORKINGDIRECTORY .
+
+#run the container
+#docker run -it workingdirectory-dockerfile
+
+#see the current working directory
+#pwd
+
+#open in another terminal and do exec
+#docker exec -it <container id> bash

@@ -1,0 +1,12 @@
+# from base image node
+FROM node:14
+
+# command executable and version
+CMD ["-v"]
+ENTRYPOINT ["node"]
+
+#build the image
+# docker build -t entrypoint-dockerfile -f DockerUsingENTRYPOINT . 
+
+#run the image
+#docker run -it -d entrypoint-dockerfile
