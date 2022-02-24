@@ -1,0 +1,18 @@
+# from base image node
+FROM node:14
+
+LABEL "Description"="This is just a phani label"
+
+ENV workdirectory /usr/node
+
+WORKDIR $workdirectory/app
+
+COPY package.json .
+
+ENTRYPOINT ["node"]
+
+#build the image
+#docker build -t label-dockerfile -f DockerUsingLABEL .
+
+#inspect the image
+#docker image inspect label-dockerfile

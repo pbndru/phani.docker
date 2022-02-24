@@ -1,7 +1,6 @@
 # from base image node
 FROM node:14
 
-# command executable and version
 CMD ["-v"]
 ENTRYPOINT ["node"]
 

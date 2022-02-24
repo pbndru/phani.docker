@@ -1,0 +1,22 @@
+# from base image node
+FROM node:14
+
+ENV workdirectory /usr/node
+
+WORKDIR $workdirectory/app
+
+RUN pwd
+
+ENTRYPOINT ["node"]
+
+#build the image
+#docker build -t env-dockerfile -f DockerUsingENV .
+
+#run the container
+#docker run -it env-dockerfile
+
+#see the current working directory
+#pwd
+
+#open in another terminal and do exec
+#docker exec -it <container id> bash
