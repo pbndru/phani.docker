@@ -1,7 +1,7 @@
 # from base image node
 FROM node:14
 
-ENV workdirectory /usr/node
+ENV workdirectory /usr/src
 
 WORKDIR $workdirectory/app
 

@@ -1,0 +1,25 @@
+# from base image node
+# here my node version is 14.15.1 - check your version in terminal > node -v
+ARG NODE_VERSION=14.15.1
+FROM node:$NODE_VERSION
+
+LABEL "Description"="This is just a phani label"
+
+ENV workdirectory /usr/src
+
+WORKDIR $workdirectory/app
+
+COPY package.json .
+
+RUN ls -ll &&\
+    npm install
+
+RUN useradd phanibandaru
+USER phanibandaru
+
+EXPOSE 3000
+
+ENTRYPOINT ["node"]
+
+#build the image
+#docker build -t user-dockerfile -f DockerUsingUSER .

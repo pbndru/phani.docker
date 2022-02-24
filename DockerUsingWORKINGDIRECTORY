@@ -1,7 +1,7 @@
 # from base image node
 FROM node:14
 
-WORKDIR /usr/node/app
+WORKDIR /usr/src/app
 
 #get the path
 RUN pwd

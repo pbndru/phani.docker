@@ -1,5 +1,7 @@
 # from base image node
-FROM node:14
+# here my node version is 14.15.1 - check your version in terminal > node -v
+ARG NODE_VERSION=14.15.1
+FROM node:$NODE_VERSION
 
 LABEL "Description"="This is just a phani label"
 
@@ -12,7 +14,9 @@ COPY package.json .
 RUN ls -ll &&\
     npm install
 
+EXPOSE 3000
+
 ENTRYPOINT ["node"]
 
 #build the image
-#docker build -t run-dockerfile -f DockerUsingRUN .
+#docker build -t expose-dockerfile -f DockerUsingEXPOSE .

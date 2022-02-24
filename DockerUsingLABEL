@@ -3,7 +3,7 @@ FROM node:14
 
 LABEL "Description"="This is just a phani label"
 
-ENV workdirectory /usr/node
+ENV workdirectory /usr/src
 
 WORKDIR $workdirectory/app
 
